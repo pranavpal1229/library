@@ -1,0 +1,55 @@
+.myLib{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    width: 10%;
+    background-color: rgb(232, 237, 224);
+    border-radius: 20px;
+}
+
+.full-width-line {
+    width: 100%;
+    margin-top: 125px; /* Optional: Adjust margin as needed */
+    border: none; /* Remove the default border style */
+    border-top: 2px solid black; /* Add a custom border on top */
+}
+
+.library {
+    position: absolute; /* or relative, depending on your layout */
+    width: 90%;
+    height: 80%;
+    background-color: rgb(232, 237, 224);
+    left: 50%;
+    transform: translateX(-50%); /* This will ensure the div is centered horizontally */
+    margin-top: 30px;
+    border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* This will space rows evenly */
+    padding: 20px; /* Optional: Add padding inside the library */
+}
+
+.row {
+    width: 100%; /* Change to 100% to utilize full width */
+    height: 30%; /* Adjust as needed */
+    background-color: white;
+    display: flex;
+    align-items: center;
+    display: flex;
+}
+
+.book{
+    height: 200px;
+    width: 130px;
+    background-color: rgb(95, 208, 58);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    word-wrap: break-word;
+    margin-right: 15px;
+}
