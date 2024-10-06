@@ -56,7 +56,22 @@
     flex-direction: column;
 }
 
-#addBook{
+.book-nr{
+    height: 200px;
+    width: 130px;
+    background-color: rgb(208, 58, 58);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    text-align: center;
+    word-wrap: break-word;
+    margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#addBook, #deleteBook{
     background-color: transparent;
     border: 1px solid black;
     border-radius: 3px;

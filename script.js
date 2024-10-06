@@ -6,6 +6,8 @@ const addBookButton = document.querySelector("#addBook")
 const closeBookModal = document.querySelector("#bookSubmit")
 const modal = document.querySelector(".modal")
 const form = document.querySelector("#addBookForm")
+let deleting = false
+let deleteButton = document.querySelector("#deleteBook")
 
 function Book(title, author, pages, read){
     this.title = title;
@@ -32,7 +34,15 @@ function displayBooks(bookArray){
         bookAuthor.textContent = book.author;
         bookPages.textContent = book.pages;
         bookItem.append(bookTitle, bookAuthor, bookPages)
+        
+        bookItem.addEventListener('click', () => deleteBook(i));
+
+        if(book.read){
         bookItem.classList.add("book")
+        }
+        else{
+            bookItem.classList.add('book-nr')
+        }
         if(i <= 11){
             rowOne.appendChild(bookItem)
         }
@@ -75,6 +85,18 @@ closeBookModal.addEventListener('click', function(event){
     }
 })
 
+function deleteBook(index) {
+    if (deleting) {
+        bookArray.splice(index, 1); // Remove book from the array
+        displayBooks(bookArray); // Update the display
+        deleting = false;
+    }
+}
+
+deleteButton.addEventListener('click', ()=>{
+    console.log('hi')
+    deleting = true
+})
 
 
 
