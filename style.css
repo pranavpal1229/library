@@ -13,7 +13,7 @@
     width: 100%;
     margin-top: 125px; /* Optional: Adjust margin as needed */
     border: none; /* Remove the default border style */
-    border-top: 2px solid black; /* Add a custom border on top */
+    border-top: 2px solid rgb(255, 255, 255); /* Add a custom border on top */
 }
 
 .library {
@@ -25,7 +25,7 @@
     transform: translateX(-50%); /* This will ensure the div is centered horizontally */
     margin-top: 30px;
     border-radius: 10px;
-
+    z-index: 20;
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* This will space rows evenly */
@@ -52,4 +52,44 @@
     text-align: center;
     word-wrap: break-word;
     margin-right: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+#addBook{
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 3px;
+}
+
+.modal {
+    position: fixed; /* or absolute */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* a high value to bring it to the front */
+    background-color: white;
+    padding: 20px;
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    height: 50%;
+    width: 50%;
+    text-align: center;
+}
+
+.formItem{
+    width: 70%;
+    height: 50px;
+    border-radius: 30px;
+    border: 1px solid black;
+    font-size: 20px;
+    text-align: center;
+}
+
+.formTitle{
+    font-size: 24px;
+}
+
+.modal::backdrop {
+    background-color: rgba(0, 0, 0, 0.5); /* Increased opacity for a darker backdrop */
 }

@@ -9,21 +9,31 @@
 <body>
     <div class="myLib">
         <h2>My Library</h2>
+        <button id="addBook">Add Book</button>
     </div>
+    <dialog class="modal">
+        <h2>Add New Book</h2>
+        <form id="addBookForm" method="dialog">
+            <label for="title" class="formTitle">Title:</label><br>
+            <input type="text" class="formItem" id="title" name="title" required><br><br>
+    
+            <label for="author" class="formTitle">Author:</label><br>
+            <input type="text" class="formItem" id="author" name="author" required><br><br>
+    
+            <label for="pages" class="formTitle">Pages:</label><br>
+            <input type="number" class="formItem" id="pages" name="pages" required><br><br>
+    
+            <label for="read" class="formTitle">Read:</label>
+            <input type="checkbox" id="read" name="read"><br><br>
+    
+            <button type="submit" id="bookSubmit">Add Book</button>
+        </form>
+    </dialog>
     <hr class="full-width-line">
     <div class="library">
         <div class="row" id="rowOne">
-            <div class="book">
-                <h3>Moby Dick</h3>
-                <h3>265 Pages</h3>
-                <h3>P. Sheisty</h3>
-            </div>
 
-            <div class="book">
-                <h3>Moby Dick</h3>
-                <h3>265 Pages</h3>
-                <h3>P. Sheisty</h3>
-            </div>
+
         </div>
         <div class="row" id="rowTwo">
 
